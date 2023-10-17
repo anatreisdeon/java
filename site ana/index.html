@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title>Javascript 01</title>
+    <script>
+        alert("olá galera!")
+    
+        var none="Ana"
+        console.log("O nome é=" +none)
+        function trocarClasse() {
+            var fraseAtual = document.gebi("frase");
+            fraseAtual.className = "h1_2";
+        }      
+    </script>
+    <script src="js/myscript.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <h1 id="frase" class="h1_1"
+    onmouseover="trocarClasse()" 
+    ondblclick="mudarFrase()">Olá Mundo!</h1>
+    <input id= "novaFrase" type="text"><br>
+    <input id= "botao" type="button"
+     value="Trocar Frase"
+     onclick="trocarTexto()"><br>
+</body>
+
+</html>
