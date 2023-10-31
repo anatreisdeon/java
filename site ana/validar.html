@@ -1,0 +1,44 @@
+<head>
+    <script>
+        function trabalhandoNomes() { 
+            var nome = prompt("Diga um nome", "Ana Clara") 
+            var sobreNome = prompt("Diga um sobreNome", "Deon Treis") 
+            var nomeCompleto = nome + " " + sobreNome
+            var tamanhoDoNome = nomeCompleto.length
+            var txt = nomeCompleto + " \n tem tamanho de " + tamanhoDoNome
+            imprimir(txt)
+
+             var resposta = confirm(nomeCompleto + "Nome está certo??")
+        
+            if(resposta ==true){
+            imprimir(txt)
+            }else{
+            imprimir("Deu ruim")
+            }
+            
+        }     
+
+
+        function imprimir(texto){
+            console.log(texto)
+            alert(texto)
+            document.writeln(texto)}
+
+
+        function trabalhandoNumeros() {
+            var n1 = prompt("Diga uma número")
+            var n2 = 5
+            var total = parseInt(n1) + n2
+            imprimir(total)
+        }
+
+        
+        
+        trabalhandoNumeros()
+        
+    </script>
+        
+</head>
+<body>
+    <h1>Validar</h1>
+</body>
