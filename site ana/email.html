@@ -4,25 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Email</title>
+    <script>
+        //chamar no evento onsubmit do form
+        function validarEmail() {
+            var email = document.getElementById("idEmail").value
+            if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+                alert("Email inválido")
+                return false
+            }else{
+                return true
+            }
+        }
+                </script>
+
 </head>
+
     <body>
-        <a href="mailto:email@provedor.com.br?
-        &subject=Assusnto do email
-        &cc=copia@provedor.com.br
-        &bcc=copiarculta@provedor.com.br
-        &body=Olá Galera!!">Enviar Email
-        </a>
-        <br>
-        <a href="http://wa.me/554899999999?
-        text=mensagem%20de%20hoje">WhatsApp</a>
-        <br>
-        <form id="idForm" 
-        action="http://jkorpela.fi/cgibin/echo.cgi" method="POST">
-            Enail: <input placeholder="nada@nada.com" 
+        Está com Dúvidas??? <br>
+            <a href="mailto:email@provedor.com.br?
+            &subject=Assusnto do email
+            &cc=copia@provedor.com.br
+            &bcc=copiarculta@provedor.com.br
+            &body=Olá Galera!!">Enviar Email
+            </a>
+            <br>
+            <a href="http://wa.me/554899999999?
+            text=mensagem%20de%20hoje">WhatsApp</a>
+            <br>
+
+        <form
+             id="idForm"  onsubmit="return validarEmail()"
+            action="https://app.headlessforms.cloud/api/v1/form-submission/UF7YAmmfN8" method="POST">
+
+            Email:
+             <input placeholder="nada@nada.com" 
             title="Uma email válido"
             type="email" name="email" 
-            id="idEmail" required>
+            id="idEmail" required> <br>
+           
+            Nome:
+            <input type="text"
+            minlength="5" maxlength="12"
+                pattern="[a-z]{5,12}"
+                nome="nome" id="idNome" required> <br>
+            <textarea rows="3" cols="25"
+                name="corpo" placeholder="Um texto do seu email"></textarea> <br>
             <input type="submit" value="enviar"/>
-         </form>
+       
+    </form>
     </body>
 </html>
