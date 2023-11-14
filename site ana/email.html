@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Email</title>
+    <title>Infotmáções</title>
     <script>
         //chamar no evento onsubmit do form
         function validarEmail() {
             var email = document.getElementById("idEmail").value
-            if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
-                alert("Email inválido")
-                return false
-            }else{
-                return true
-            }
+            if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) 
+            {alert("Email inválido")
+                return false}
+            else{
+                return true}
         }
-                </script>
+    </script>
 
 </head>
 
@@ -34,21 +33,65 @@
 
         <form
              id="idForm"  onsubmit="return validarEmail()"
-            action="https://app.headlessforms.cloud/api/v1/form-submission/UF7YAmmfN8" method="POST">
+            action="https://app.headlessforms.cloud/api/v1/form-submission/UF7YAmmfN8" method="POST"> <br> <br>
 
-            Email:
+            Email: <br>
              <input placeholder="nada@nada.com" 
             title="Uma email válido"
             type="email" name="email" 
             id="idEmail" required> <br>
+            <textarea rows="3" cols="25"
+            name="corpo" placeholder="Um texto do seu email"></textarea> <br>
+            <br>
            
-            Nome:
+            NOME: <br>
             <input type="text"
             minlength="5" maxlength="12"
-                pattern="[a-z]{5,12}"
-                nome="nome" id="idNome" required> <br>
-            <textarea rows="3" cols="25"
-                name="corpo" placeholder="Um texto do seu email"></textarea> <br>
+            pattern="[a-z]{5,12}"
+            name="nome" id="idNome" required> <br> <br>
+
+            CPF: <br>
+            <input type="text" name="cpf" 
+            pattern="\d{3}\.\d{3}\.\d{3}-\d{2} " 
+            maxlength="11"
+            title="Digite um CPF válido"
+            input placeholder= xxx.xxx.xxx-xx 
+            id="idCPF" required> <br>  <br>
+            
+            CEP: <br> 
+            <input type="text" name="cep" 
+            maxlength="8"
+            pattern="\d{5}-\d{3} [a-z]{8,8}" 
+            title="Digite um CEP válido"
+            input placeholder= xxxxx-xxx required
+            id="idCEP"> <br>  <br> 
+
+            NÚMERO: <br> 
+            <input type="text" name="número" 
+            pattern="(\d{2})\d{5}-\d{4}" 
+            title="Digite um número válido"
+            input placeholder= "(xx) xxxxx-xxxx"  id="Número" required> <br>  <br> 
+
+            DATA: <br> 
+            <input type="date" name="data" 
+            pattern="\d{2}/\d{2}/\d{4}" 
+            title="Digite a data atual"
+            input placeholder= "xx/xx/xxxx" id="idData" required> <br>  <br> 
+
+            HORA: <br> 
+            <input type="time" name="hora"
+            pattern="\d{2}:\d{2}" 
+            title="Digite a hora atual"
+            id="idHora" required> <br>  <br> 
+
+            PLACA: <br> 
+            <input type="TEXT" name="hora"
+            pattern="\d{2}:\d{2}" 
+            title="Digite a hora atual"
+            id="idHora" required> <br>  <br> 
+
+
+
             <input type="submit" value="enviar"/>
        
     </form>
