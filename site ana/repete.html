@@ -2,26 +2,41 @@
 <html>
 <head>
     <title>Repete</title>
-
     <script>
-
-        function contar() {
-            var cars=["jetta com couro brnaco rebaixado TCHUTCHUQUINHO", "gol", "golf" ];
-            
-
-            for (
-                let index= cars.length -1 ; index>=0; index--
-            ){
-                const car = cars[index];
-                document.write(car + "<br>")
-                
-            }
-        
+        const arrayValores=[]
+        for(let i = 0;i<=numeroFornecido; i++){
+            arrayValores.push(i)
+            document.write("original: " + arrayValores + "<br>");
+            document.write("<hr>")
         }
-      
 
+
+        function contar(){
+            var a = ["josé", "Maria",  "Padre", "Carine", "Raberto"," Brenda"] 
+
+
+            for (let index = 0; index< a.length; index++) {
+                const element= a [index]
+
+                if(element == "pastor"){
+                document.write("casinha: "+ index + "tem" + element + "<br>")   
+                break}
+               
+            }
+            document.write("original = ")
+            var quem = prompt ("Diga um nome")
+            var ondeEstá = a.indexOf(quem)
+
+            if (ondeEstá != -1){ 
+                document.write("casinha: "+ ondeEstá + "tem" + quem + "<br>")   
+                a.splice(ondeEstá,1)
+            }else{
+                document.write("não achei: " + quem + "<br>")
+            }
+            document.write(a)
+
+        }
     </script>
-     
 </head>
 <body>
     <input type="button" value="enviar"  onclick="contar()">
