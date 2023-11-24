@@ -15,13 +15,13 @@
             médias[1]= nota2
 
             var somatoria = 0.0;
-            for (var i = 0; i< madias.length; i++){
-                var nota = média(i);
+            for (var i = 0; i< médias.length; i++){
+                var nota = média[i];
                 somatoria= somatoria + parseFloat(nota);
             }
             
             var m3 = 18.0 - somatoria;
-            if(m3<10,0){
+            if(m3 < 10.0){
                 alert("você precisa alcançar " + m3); 
             } else {alert("Não deu. Precisaria de" + m3 + ".Está reprovado!!"); }
 
